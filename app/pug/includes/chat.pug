@@ -7,14 +7,14 @@ header.d-flex.align-items-center.mr-4.border-bottom
 .chat-feed.d-flex.flex-column.gap-3.px-5.pt-5.mb-auto
   each message in messages
     if message.type === "incoming"
-      .w-100.w-md-75.d-flex.align-self-start
+      .chat-message.d-flex.align-self-start
           img.d-none.d-md-block.rounded-circle.mt-auto.me-3(src= message.avatar width="50" height="50")
           .p-4.shadow-sm.rounded-4.bg-light
               p.fw-bold.text-dark.mb-1= message.name
               p.mb-2.text-secondary= message.text
               p.opacity-50.small.border-top.pt-1.mb-0.text-secondary= message.time
     if message.type === "outcoming"
-      .w-md-75.d-flex.align-self-end
+      .chat-message.d-flex.align-self-end
           img.d-none.d-md-block.rounded-circle.mt-auto.me-3(src= message.avatar width="50" height="50")
           .p-4.shadow-sm.rounded-4.bg-primary
               p.mb-2.text-light= message.text

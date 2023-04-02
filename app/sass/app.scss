@@ -82,7 +82,7 @@ body {
                 }
             }
 
-            .tab-content h-100{
+            .left-content {
                 @include hide-scrollbar();
 
                 .contact:hover {
@@ -122,4 +122,12 @@ body {
       width: 42px;
       height: 42px;
     }
-  }
+}
+
+.chat-message {
+    width: 75%;
+  
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+}
