@@ -55,15 +55,15 @@ html.h-100(lang='ru')
         section.left.col-xxl-4.col-sm-12.col-md-4.h-100.p-0.d-flex.flex-md-column.flex-column-reverse
           include ../includes/chat-tab-header.pug
           .tab-content.left-content.h-100
-            .px-4.tab-pane.d-md-none.h-100(role="tabpanel" aria-labelledby="current-chat-tab" tabindex="0")#current-chat
+            .px-4.tab-pane.fade.d-md-none.h-100(role="tabpanel" aria-labelledby="current-chat-tab" tabindex="0")#current-chat
               .d-flex.flex-column.h-100
                 include ../includes/chat.pug
                 +chat-input("1")
-            .pt-5.px-4.tab-pane(role="tabpanel" aria-labelledby="contacts-tab" tabindex="0")#contacts
+            .pt-5.px-4.tab-pane.fade(role="tabpanel" aria-labelledby="contacts-tab" tabindex="0")#contacts
               include ../includes/contacts.pug
-            .pt-5.px-4.tab-pane.active(role="tabpanel" aria-labelledby="chats-tab" tabindex="0")#chats
+            .pt-5.px-4.tab-pane.fade.active(role="tabpanel" aria-labelledby="chats-tab" tabindex="0")#chats
               include ../includes/messages.pug
-            .pt-5.px-4.tab-pane(role="tabpanel" aria-labelledby="profile-tab" tabindex="0")#profile
+            .pt-5.px-4.tab-pane.fade(role="tabpanel" aria-labelledby="profile-tab" tabindex="0")#profile
               include ../includes/profile.pug
         section.right.col.d-none.d-md-flex.flex-column.p-0.h-100
           include ../includes/chat.pug
