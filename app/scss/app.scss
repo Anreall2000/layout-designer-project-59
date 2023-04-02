@@ -1,0 +1,128 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$custom-colors: (
+  "gray": #efefef,
+  "primary": #4545a5,
+  "secondary": #6c757d,
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #fbfbfb,
+  "dark": #343a40,
+);
+$theme-colors: map.merge($theme-colors, $custom-colors);
+$custom-breakpoints: (
+  "xxl": 1600px,
+);
+$grid-breakpoints: map.merge($grid-breakpoints, $custom-breakpoints);
+$custom-max-widths: (
+  "xxl": 1540px,
+);
+$container-max-widths: map.merge($container-max-widths, $custom-max-widths);
+$body-color: $gray-600;
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "utilities/rounded";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+$enable-shadows: true;
+
+@mixin hide-scrollbar() {
+  & {
+    overflow-x: hidden;
+
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  background-color: map.get($theme-colors, "gray");
+}
+
+.container-xxl {
+  border-color: map.get($theme-colors, "gray");
+
+  .row {
+    .left {
+      border-right: 1px solid map.get($theme-colors, "gray");
+
+      header {
+        .hexlet-logo {
+          width: 14px;
+          filter: invert(1);
+        }
+
+        .tab-logo {
+          width: 25px;
+          filter: invert(1);
+        }
+
+        a.logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 25px;
+          height: 40px;
+        }
+      }
+
+      .left-content {
+        @include hide-scrollbar;
+
+        .contact:hover {
+          background-color: map.get($theme-colors, "primary");
+
+          p {
+            color: map.get($theme-colors, "light") !important;
+          }
+        }
+
+        .chat:hover {
+          background-color: map.get($theme-colors, "primary");
+
+          p {
+            color: map.get($theme-colors, "light") !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.search {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid map.get($theme-colors, "gray");
+  border-left: 0;
+}
+
+.chat-feed {
+  @include hide-scrollbar;
+}
+
+.chat-btn {
+  width: 50px;
+  height: 50px;
+
+  @include media-breakpoint-down(md) {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.chat-message {
+  width: 75%;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
