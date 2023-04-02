@@ -82,7 +82,7 @@ body {
                 }
             }
 
-            .tab-content {
+            .tab-content h-100{
                 @include hide-scrollbar();
 
                 .contact:hover {

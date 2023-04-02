@@ -6,19 +6,25 @@
     <title>Мессенджер Hexlet Chat </title>
     <link rel="stylesheet" href="./styles/app.css">
   </head>
-  <body class="p-4 h-100">
+  <body class="p-md-4 h-100">
     <div class="container-xxl bg-white h-100 overflow-hidden rounded-md-4">
       <div class="row h-100">
-        <section class="left col-xxl-4 col-sm-12 col-md-5 h-100 p-0 d-flex flex-md-column flex-column-reverse">
+        <section class="left col-xxl-4 col-sm-12 col-md-4 h-100 p-0 d-flex flex-md-column flex-column-reverse">
           <header class="bg-primary p-3 d-flex justify-content-between"><a class="logo" href="index.html"><img class="hexlet-logo" src="images/icons/logo.svg" alt="hexlet-logo"></a>
             <ul class="nav justify-content-end" role="tablist">
-              <li class="nav-item"><a class="nav-link active" href="#contacts" id="contacts-tab" data-bs-toggle="tab" data-bs-target="#contacts" aria-controls="contacts" role="tab" aria-selected="true"><img class="tab-logo me-2" src="images/icons/people.svg" alt="logo" width="25" height="25"><span class="d-none d-xl-inline small text-light">Контакты</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#chats" id="chats-tab" data-bs-toggle="tab" data-bs-target="#chats" aria-controls="chats" role="tab" aria-selected="false"><img class="tab-logo me-2" src="images/icons/chat.svg" alt="logo" width="25" height="25"><span class="d-none d-xl-inline small text-light">Сообщения</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#profile" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" aria-controls="profile" role="tab" aria-selected="false"><img class="tab-logo me-2" src="images/icons/person.svg" alt="logo" width="25" height="25"><span class="d-none d-xl-inline small text-light">Профиль</span></a></li>
+              <li class="nav-item">
+                <button class="nav-link active" href="#contacts" id="contacts-tab" data-bs-toggle="tab" data-bs-target="#contacts" aria-controls="contacts" role="tab" aria-selected="true"><img class="tab-logo me-2" src="images/icons/people.svg" alt="logo" width="25" height="25"><span class="d-none d-xl-inline small text-light">Контакты</span></button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" href="#chats" id="chats-tab" data-bs-toggle="tab" data-bs-target="#chats" aria-controls="chats" role="tab" aria-selected="false"><img class="tab-logo me-2" src="images/icons/chat.svg" alt="logo" width="25" height="25"><span class="d-none d-xl-inline small text-light">Сообщения</span></button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" href="#profile" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" aria-controls="profile" role="tab" aria-selected="false"><img class="tab-logo me-2" src="images/icons/person.svg" alt="logo" width="25" height="25"><span class="d-none d-xl-inline small text-light">Профиль</span></button>
+              </li>
             </ul>
           </header>
           <div class="tab-content h-100">
-            <div class="pt-5 px-4 tab-pane show active" role="tabpanel" aria-labelledby="contacts-tab" tabindex="0" id="contacts">
+            <div class="pt-5 px-4 fade tab-pane show active" role="tabpanel" aria-labelledby="contacts-tab" tabindex="0" id="contacts">
               <h2 class="fw-bold mb-4 text-dark">Контакты</h2>
                             <form class="mb-5" role="search" action="#" method="post">
                               <input class="shadow-none search form-control p-4" type="search" placeholder="Поиск по контактам" aria-label="Поиск">
@@ -53,7 +59,7 @@
                                 <p class="text-muted small mb-0">Был онлайн вчера</p>
                               </div></a>
             </div>
-            <div class="pt-5 px-4 tab-pane" role="tabpanel" aria-labelledby="chats-tab" tabindex="0" id="chats">
+            <div class="pt-5 px-4 fade tab-pane" role="tabpanel" aria-labelledby="chats-tab" tabindex="0" id="chats">
               <h2 class="fw-bold mb-4 text-dark">Чаты</h2>
                             <form class="mb-5" role="search" action="#" method="post">
                               <input class="shadow-none search form-control p-4" type="search" placeholder="Поиск по сообщениям" aria-label="Поиск">
@@ -80,7 +86,7 @@
                                 <p class="text-muted small mb-0 text-truncate">Тесты упали &gt;_&lt;</p>
                               </div></a>
             </div>
-            <div class="pt-5 px-4 tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0" id="profile">
+            <div class="pt-5 px-4 fade tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0" id="profile">
               <h2 class="fw-bold mb-4 text-dark">Профиль</h2>
                             <form class="mb-5" role="search" action="#" method="post">
                               <input class="shadow-none search form-control p-4" type="search" placeholder="Поиск по сообщениям" aria-label="Поиск">

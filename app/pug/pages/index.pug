@@ -1,17 +1,17 @@
 doctype html
 html.h-100(lang='ru')
   include ../includes/head.pug
-  body.p-4.h-100
+  body.p-md-4.h-100
     .container-xxl.bg-white.h-100.overflow-hidden.rounded-md-4
       .row.h-100
-        section.left.col-xxl-4.col-sm-12.col-md-5.h-100.p-0.d-flex.flex-md-column.flex-column-reverse
+        section.left.col-xxl-4.col-sm-12.col-md-4.h-100.p-0.d-flex.flex-md-column.flex-column-reverse
           include ../includes/tab-header.pug
           .tab-content.h-100
-            .pt-5.px-4.tab-pane.show.active(role="tabpanel" aria-labelledby="contacts-tab" tabindex="0")#contacts
+            .pt-5.px-4.fade.tab-pane.show.active(role="tabpanel" aria-labelledby="contacts-tab" tabindex="0")#contacts
               include ../includes/contacts.pug
-            .pt-5.px-4.tab-pane(role="tabpanel" aria-labelledby="chats-tab" tabindex="0")#chats
+            .pt-5.px-4.fade.tab-pane(role="tabpanel" aria-labelledby="chats-tab" tabindex="0")#chats
               include ../includes/messages.pug
-            .pt-5.px-4.tab-pane(role="tabpanel" aria-labelledby="profile-tab" tabindex="0")#profile
+            .pt-5.px-4.fade.tab-pane(role="tabpanel" aria-labelledby="profile-tab" tabindex="0")#profile
               include ../includes/profile.pug
         section.right.col.d-none.d-md-flex.flex-column
           include ../includes/greeting.pug
