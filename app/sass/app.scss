@@ -1,0 +1,125 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$custom-colors: (
+  "gray": #EFEFEF,
+  "primary": #4545A5,
+  "secondary": #6C757D,
+  "success": #28A745,
+  "info": #17A2B8,
+  "warning": #FFC107,
+  "danger": #DC3545,
+  "light": #FBFBFB,
+  "dark": #343A40,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$custom-breakpoints: (
+    "xxl": 1600px,
+);
+
+$grid-breakpoints: map-merge($grid-breakpoints, $custom-breakpoints);
+
+$custom-max-widths: (
+    "xxl": 1540px,
+);
+
+$container-max-widths: map-merge($container-max-widths, $custom-max-widths);
+
+$body-color: $gray-600;
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities.scss";
+
+@import "utilities/rounded.scss";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+$enable-shadows: true;
+
+@mixin hide-scrollbar() {
+    & {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+body {
+    background-color: map-get($theme-colors, "gray");
+}
+
+.container-xxl {
+    border-color: map-get($theme-colors, "gray");
+
+    .row {
+        .left {
+            border-right: 1px solid map-get($theme-colors, "gray");
+
+            header {
+                .hexlet-logo {
+                    width: 14px;
+                    filter: invert(1);
+                }
+                .tab-logo {
+                    width: 25px;
+                    filter: invert(1);
+                }
+
+                a.logo {
+                    width: 25px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .tab-content {
+                @include hide-scrollbar();
+
+                .contact:hover {
+                    background-color: map-get($theme-colors, "primary");
+                    p {
+                        color: map-get($theme-colors, "light") !important;
+                    }
+                }
+
+                .chat:hover {
+                    background-color: map-get($theme-colors, "primary");
+                    p {
+                        color: map-get($theme-colors, "light") !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.search {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid map-get($theme-colors, "gray");
+}
+
+.chat-feed {
+    @include hide-scrollbar();
+}
+
+.chat-btn {
+    width: 50px;
+    height: 50px;
+  
+    @include media-breakpoint-down(md) {
+      width: 42px;
+      height: 42px;
+    }
+  }

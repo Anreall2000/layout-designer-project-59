@@ -1,0 +1,38 @@
+-
+  const chats = [
+    {
+      name: "Вениамин Редакторович",
+      time: "11:45",
+      message: "o_O",
+      avatar: "images/avatar_4.jpg",
+      link: "chat.html"
+    },
+    {
+      name: "Джедай Падаванов",
+      time: "10:12",
+      message: "Привет, скоро третий проект? Уже скоро надо будет выложить",
+      avatar: "images/avatar_2.jpg",
+      link: "#"
+    },
+    {
+      name: "Алексей Примадонин",
+      time: "08:53",
+      message: "Тесты упали >_<",
+      avatar: "images/avatar_3.jpg",
+      link: "#"
+    },
+  ]
+
+mixin chat(chatInfo)
+  a.chat.d-flex.align-items-center.text-decoration-none.mb-3.shadow-sm.pe-4(href= chatInfo.link)
+    +avatar(chatInfo.avatar)
+    .py-4.pe-3.w-100.overflow-hidden
+        .d-flex.justify-content-between
+            p.text-dark.fw-bold.mb-0= chatInfo.name
+            p.text-muted.small.mb-0= chatInfo.time
+        p.text-muted.small.mb-0.text-truncate= chatInfo.message
+
+h2.fw-bold.mb-4.text-dark Чаты
++search("Поиск по сообщениям")
+each chat in chats
+  +chat(chat)
